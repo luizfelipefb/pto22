@@ -37,6 +37,12 @@ gcloud iam service-accounts keys create key.json \
   --iam-account=${NAME}@phoenix-cit.iam.gserviceaccount.com
 ```
 
+## Testing
+
+To test your code, simply add `predict()` at the end of the `index.js` file and run using `npm start`
+
+Use some `console.log()` in the code to see what's happening is the easiest way to debug the code
+
 ## Deploy
 
 To deploy the function on GCP run the following command:
