@@ -1,0 +1,25 @@
+{
+  "name": "pto22",
+  "version": "1.0.0",
+  "description": "Paul the Octopus 2022",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luizfelipefb/pto22.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luizfelipefb/pto22/issues"
+  },
+  "homepage": "https://github.com/luizfelipefb/pto22#readme",
+  "dependencies": {
+    "@google-cloud/storage": "^6.7.0",
+    "csvtojson": "^2.0.10",
+    "json2csv": "^5.0.7"
+  }
+}
