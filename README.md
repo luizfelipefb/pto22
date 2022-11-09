@@ -4,7 +4,7 @@ GCP Function to predict winners for the World Cup 2022
 
 ## IMPORTANT !!!
 
-Change the `src/predictor.js` file to make YOUR prediction, surely **giving** 1x0 to the better ranking team will not give have award winning results, this is just to illustrate how to create a simple GCP function to participate the competition.
+Change the `src/predictor.js` file to make YOUR prediction, **surely** giving 1x0 to the better ranking team will not give have award winning results, this is just to illustrate how to create a simple GCP function to participate the competition.
 
 ## Dependencies
 
@@ -13,7 +13,9 @@ Change the `src/predictor.js` file to make YOUR prediction, surely **giving** 1x
 
 ## Develpment
 
-Run `gcloud init` to generate the credentials needed to run everything
+First of all, run `npm install` to install all the dependencies used in the project
+
+Now, run `gcloud init` to generate the GCP credentials needed to execute everything
 
 We now need to create a service account to allow us to run the code, replace the <replace_with_name> with the name for yout account
 
