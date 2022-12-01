@@ -32,14 +32,15 @@ const getRanking = async () => {
   return obj
 }
 
-const getSchedule = async () => {
-  let json = await connector.fetchFileAsJSON('matches-schedule.csv')
-  return json
+const getSchedule = async (playoffs) => {
+  let filename = 'matches-schedule.csv'
+  if (playoffs) filename = 'playoffs-schedule.csv'
+  return await connector.fetchFileAsJSON(filename)
 }
 
-const predict = async () => {
+const predict = async (playoffs) => {
   const ranking = await getRanking()
-  const schedule = await getSchedule()
+  const schedule = await getSchedule(playoffs)
 
   let results = []
   schedule.forEach((s) => {

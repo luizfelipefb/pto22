@@ -17,7 +17,7 @@ First of all, run `npm install` to install all the dependencies used in the proj
 
 Now, run `gcloud init` to generate the GCP credentials needed to execute everything
 
-We now need to create a service account to allow us to run the code, replace the <replace_with_name> with the name for yout account
+We now need to create a service account to allow us to run the code, replace the <replace_with_name> with the name for your account
 
 ```bash
 export NAME=<replace_with_name>
@@ -45,6 +45,10 @@ To test your code, simply add `predict()` at the end of the `index.js` file and 
 
 Use some `console.log()` in the code to see what's happening is the easiest way to debug the code
 
+## Debug
+
+To debug the code, run `npm run debug`, this command will create a server at `https://localhost:8080` that can be called in browser to the same effect as it was on the cloud.
+
 ## Deploy
 
 To deploy the function on GCP run the following command:
@@ -65,6 +69,12 @@ Now all you need to do is access the URL with the ${FUNCTION_NAME} you previousl
 [https://us-central1-phoenix-cit.cloudfunctions.net/FUNCTION_NAME](https://us-central1-phoenix-cit.cloudfunctions.net/FUNCTION_NAME)
 
 to see the csv generated.
+
+## Getting result
+
+To get the predictions from the group stage, we expect a file named `matches-schedule.csv` in the storage to be parsed and return the results as an `csv` uppon calling the function URL.
+
+To get results from the playoffs, the file name we look for is `playoffs-schedule.csv`. To parse the results from this stage, we need to add a `playoffs` parameter in the query when calling the function as `https://URL/?playoffs`.
 
 ## Ending
 

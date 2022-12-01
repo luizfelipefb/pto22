@@ -10,8 +10,12 @@ const json2csvParser = new Parser()
  * @param {!express:Response} res HTTP response context.
  */
 const predict = async (req, res) => {
+  // check if request has 'playoffs' argument
+  let playoffsRequested = 'playoffs' in req.query
+  if (playoffsRequested) console.log(`Playoffs requested`)
+
   // get predction JSON
-  let resp = await predictor.predict()
+  let resp = await predictor.predict(playoffsRequested)
   console.log(`Response obtained`)
 
   // parse JSON into CSV
